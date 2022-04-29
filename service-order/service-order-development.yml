@@ -1,0 +1,39 @@
+#
+# Dev Configuration
+#
+spring:
+   devtools:
+      livereload:
+         enabled: true
+
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://35.227.177.180:5432/poscoict
+      username: '{cipher}AQAykr03C46Sl36f49n5MhZuQY407kQOBa1ClSVk9doX+aKbhFmabRMJzvKydpr8TQHYKue9OaxjyHXptV0NXgA5ItRqCthmrQjNLigYncUEBU3Y+k53g7pxfgG77i2p3ScEoXCwR7AZ2LgzC0lQP2GQcDlc12tsyrhdztwBIJqETk1ZR+ppM4jou3NsTHZCgKwDQVWfSJMArJaf3u2eEDSd6flVMVH7GvzhCNfvEy0v4Z4czRdRv5uQbHqcgiV0Of28pHA0JTOy/385a8MqxqbIqbpYZevC3qjaX0nmf2I9Iw+pEAxF/TL8ifH2ELhxgJ1bukoDf/zUincpBBzUMP5sQINDpobDOWm/v9gdNliK/kZv4FSsIgGhJdfJztXmB5c='
+      password: '{cipher}AQA0k93q2+jiYdYyfGTBE2K0nWzQ0BIvWB7EAIeVWfUvT+Rkn0od8ZDWzjbeU5GwgiqTRiJUutHLQPb60upyYsTtJocTx+1jNF1WlchCF+7tJc27qGLBF1J6+j37L9XTeVzPGJRS3Zgs97Ehwg3veTkpU0nSG6Wp7HrtsMpawX24zlckmPl/FsL2L97iwIUliypzhOo6JKiQu26LQ3V3pyh5srf7ZDTycr/69vrZcc1ei0s+daUJsHuLyvr5FwkkoeCWxt/1NpHYLio+og3CgcjfTfey5UkOO4J6IBaTZEaAkfn4fqXKAhDE+GPaxzqqwBvknmIbelO4ZAkePgpWfbUyWe7gqzjxo2EkCkyR9CaIoDnP9h1jlA2Hv5QCtwEK3gY='
+
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+
+server:
+   port: 8080
+   servlet:
+      context-path: /Home
+      encoding:
+         charset: UTF-8
+         enabled: true
+
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka
+
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: INFO
