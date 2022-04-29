@@ -1,11 +1,7 @@
 #
-# Default Configuration
+# Prd Configuration
 #
 spring:
-   devtools:
-      livereload:
-         enabled: true
-
    datasource:
       driver-class-name: org.postgresql.Driver
       url: jdbc:postgresql://35.227.177.180:5432/poscoict
@@ -16,9 +12,9 @@ mybatis:
    config-location: classpath:mybatis/configuration.xml
 
 server:
-   port: 8080
+   port: 0
    servlet:
-      context-path: /Home
+      context-path: /
       encoding:
          charset: UTF-8
          enabled: true
@@ -34,6 +30,14 @@ eureka:
 
 logging:
    pattern:
-      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+      file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   logback:
+      rollingpolicy:
+         file-name-pattern: "logs/${spring.application.name}.%d{yyyy-MM-dd}.%i.log.zip"
+         max-file-size: 10MB
+         max-history: 10
+   file:
+      name: logs/${spring.application.name}.log
    level:
-      root: INFO
+      root: WARN
+      
