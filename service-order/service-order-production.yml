@@ -26,7 +26,7 @@ eureka:
       fetchRegistry: true
       registerWithEureka: true
       serviceUrl:
-         defaultZone: http://35.227.177.180:8761/eureka
+         defaultZone: http://35.233.199.8:8761/eureka
 
 logging:
    pattern:
